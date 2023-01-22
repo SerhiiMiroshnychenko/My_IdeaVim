@@ -1,5 +1,3 @@
-MY IDEAVIM CONFIGURATION
-
 "" Source your .vimrc
 "source ~/.vimrc
 
@@ -32,13 +30,62 @@ map Q gq
 
 set ruler
 set showmode
+set showcmd
 set clipboard=unnamedplus " додає роботу з загальним буфером обміну
+set showmatch " Show matching brackets when text indicator is over them
+set mat=2 " How many tenths of a second to blink when matching brackets
+hlsearch
+
+let mapleader = " "
+inoremap ; :
+nnoremap ; :
+nnoremap - $
+nnoremap + ^
 
 set surround " https://github.com/tpope/vim-surround
 set multiple-cursors " https://github.com/terryma/vim-multiple-cursors
-set commentary " https://github.com/tpope/vim-commentary/blob/master/doc/commentary.txt
 set highlightedyank " https://github.com/machakann/vim-highlightedyank
+let g:highlightedyank_highlight_duration = "5000"
+"let g:highlightedyank_highlight_duration = "-1"
 
-nnoremap .p "0p
-xnoremap .p "0p
-vnoremap .p "0p
+nmap zz <Action>(TogglePresentationMode)
+vnoremap < <gv
+vnoremap > >gv
+vnoremap t uvU
+
+" <q> as <one word> map
+nmap q
+nmap qx "wdiw
+nmap qy viw"wy
+nmap qp viw"wp
+nmap q- viwu
+nmap q+ viwU
+nmap qt viwuvU
+nmap qr :action RenameElement<CR>
+nmap q9 ysiw)
+nmap q[ ysiw]
+nmap q{ ysiw}
+nmap q0 ds)
+nmap q] ds]
+nmap q} ds}
+
+
+" Leader map
+nmap <leader>
+vmap <leader>
+vmap <leader>c :action CommentByLineComment<CR>
+nmap <leader>s <Action>(Run)
+" These create newlines like o and O but stay in normal mode
+nmap <leader><Down> o<Esc>
+nmap <leader><Up> O<Esc>
+nmap <leader>' ^i"""<Esc>$a"""<Esc>
+nmap <leader>m oif __name__ == "__main__":<Esc>
+
+
+nmap <leader>a <Action>($SelectAll)
+vmap <leader>y <Action>($Copy)
+vmap <leader>p <Action>($Paste)
+vmap <leader>x <Action>($Cut)
+vmap <leader>d <Action>($Delete)
+nmap <leader>u <Action>($Undo)
+nmap <leader>r <Action>($Redo)
