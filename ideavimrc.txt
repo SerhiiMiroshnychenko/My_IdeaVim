@@ -58,6 +58,7 @@ nmap q
 nmap qx "wdiw
 nmap qy viw"wy
 nmap qp viw"wp
+nmap qo "wp
 nmap q- viwu
 nmap q+ viwU
 nmap qt viwuvU
@@ -73,15 +74,22 @@ nmap q} ds}
 " Leader map
 nmap <leader>
 vmap <leader>
-vmap <leader>c :action CommentByLineComment<CR>
-nmap <leader>s <Action>(Run)
+
 " These create newlines like o and O but stay in normal mode
 nmap <leader><Down> o<Esc>
 nmap <leader><Up> O<Esc>
-nmap <leader>' ^i"""<Esc>$a"""<Esc>
-nmap <leader>m oif __name__ == "__main__":<Esc>
 
+" IDE fiches clones
+vmap <leader>c :action CommentByLineComment<CR>
+nmap <leader>s <Action>(Run)
 
+" Python code cheats
+nmap <leader>' o"""<Enter>
+nmap <leader>m oif __name__ == "__main__":<Esc>o
+nmap <leader>l viw"lyoprint(f'{<Esc>"lpa=}')<Esc>
+vmap <leader>l "lyoprint(f'{<Esc>"lpa=}')<Esc>
+
+"Standard hotkeys clones
 nmap <leader>a <Action>($SelectAll)
 vmap <leader>y <Action>($Copy)
 vmap <leader>p <Action>($Paste)
