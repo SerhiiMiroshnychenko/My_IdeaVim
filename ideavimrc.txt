@@ -50,6 +50,7 @@ nmap zz <Action>(TogglePresentationMode)
 vnoremap < <gv
 vnoremap > >gv
 vnoremap t uvU
+vmap l <Action>(ReformatCode)
 
 " <q> as <one word> map
 nmap q
