@@ -91,6 +91,8 @@ nmap <leader>e Stry:<Esc>po<Esc>0iexcept BaseException as e:<Esc>oprint(e.__clas
 nmap <leader>n oif __name__ == "__main__":<Esc>o
 vmap <leader>m didef main():<Esc><Enter>0<leader>nmain()<Esc>3k-p
 
+"IDE actions
+nmap <leader>b <Action>($SelectAll)<Action>(ReformatCode)
 
 "Standard hotkeys clones
 nmap <leader>a <Action>($SelectAll)
