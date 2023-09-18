@@ -104,3 +104,9 @@ nmap <leader>u <Action>($Undo)
 nmap <leader>r <Action>($Redo)
 set clipboard+=ideaput
 
+"For Odoo
+vmap <leader>- :s/\./_/g<Enter>
+vmap <leader>. :s/_/./g<Enter>
+vmap <leader>+ :s/_/ /g<Enter>
+vmap <leader>t :s/\(\w\)\(\w*\)/\u\1\L\2/g<Enter>
+vmap <leader><leader> :s/_/ /g<Enter>:s/\./ /g<Enter>:s/\(\w\)\(\w*\)/\u\1\L\2/g<Enter>
