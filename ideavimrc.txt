@@ -85,8 +85,8 @@ vmap m :norm x<Enter>
 
 " Python code cheats
 nmap <leader>' o"""<Enter>
-nmap <leader>l viw"lyoprint(f'{<Esc>"lpa = }')<Esc>
-vmap <leader>l "lyoprint(f'{<Esc>"lpa = }')<Esc>
+nmap <leader>l viw"lyoprint(f"{<Esc>"lpa = }")<Esc>
+vmap <leader>l "lyoprint(f"{<Esc>"lpa = }")<Esc>
 nmap <leader>e Stry:<Esc>po<Esc>0iexcept BaseException as e:<Esc>oprint(e.__class__, e)<Esc>
 nmap <leader>n oif __name__ == "__main__":<Esc>o
 vmap <leader>m didef main():<Esc><Enter>0<leader>nmain()<Esc>3k-p
@@ -102,6 +102,7 @@ vmap <leader>x <Action>($Cut)
 vmap <leader>d <Action>($Delete)
 nmap <leader>u <Action>($Undo)
 nmap <leader>r <Action>($Redo)
+nmap <leader>f <Action>(Find)
 set clipboard+=ideaput
 
 "For Odoo
