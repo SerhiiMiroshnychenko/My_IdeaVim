@@ -34,7 +34,13 @@ set showcmd
 set clipboard=unnamedplus " додає роботу з загальним буфером обміну
 set showmatch " Show matching brackets when text indicator is over them
 set mat=2 " How many tenths of a second to blink when matching brackets
+set easymotion
 hlsearch
+
+set quickscope
+let g:qs_primary_color = '#c7535c'
+let g:qs_secondary_color = '#c678dd'
+let g:qs_accepted_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 let mapleader = " "
 nnoremap - $
@@ -69,6 +75,11 @@ nmap q0 ds)
 nmap q] ds]
 nmap q} ds}
 
+" vim-flash
+nmap <leader>s <Action>(flash.search)
+
+nmap <leader>w :action KJumpAction.Word1<cr>
+
 
 " Leader map
 nmap <leader>
@@ -79,7 +90,6 @@ nmap <leader><Up> O<Esc>
 
 " IDE fiches clones
 vmap <leader>c :action CommentByLineComment<CR>
-nmap <leader>s <Action>(RunClass)
 vmap n :norm i#<Enter>
 vmap m :norm x<Enter>
 
@@ -111,3 +121,6 @@ vmap <leader>. :s/_/./g<Enter>
 vmap <leader>+ :s/_/ /g<Enter>
 vmap <leader>t :s/\(\w\)\(\w*\)/\u\1\L\2/g<Enter>
 vmap <leader><leader> :s/_/ /g<Enter>:s/\./ /g<Enter>:s/\(\w\)\(\w*\)/\u\1\L\2/g<Enter>
+
+"Заміна ' на " :%s/'/"/g
+vmap <leader>g :s%/'/\"/g<Enter>
