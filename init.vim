@@ -30,7 +30,10 @@ nnoremap <silent> <F5> <cmd>Telescope live_grep<CR>
 lua << EOF
 require('telescope').setup{
   defaults = {
-    -- Тут за бажанням можна налаштувати вигляд
+    layout_strategy = 'vertical', -- Результати будуть знизу на всю ширину екрана
+    layout_config = {
+      vertical = { width = 0.9, height = 0.9, preview_height = 0.5 }
+    }
   }
 }
 EOF
