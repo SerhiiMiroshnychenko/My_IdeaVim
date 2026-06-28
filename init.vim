@@ -13,10 +13,18 @@ call plug#end()
 " ---------------------
 
 " --- ГАРЯЧІ КЛАВІШІ ---
-nnoremap <F1> :NERDTreeToggle<CR> " Тогл дерева файлів
-nnoremap <F2> <cmd>Telescope find_files<CR> " Пошук файлів
-nnoremap <F4> <cmd>Telescope current_buffer_fuzzy_find<CR> " Пошук у поточному файлі
-nnoremap <F5> <cmd>Telescope live_grep<CR> " Пошук тексту в проєкті
+
+" Тогл дерева файлів
+nnoremap <silent> <F1> <cmd>NERDTreeToggle<CR>
+
+" Пошук файлів
+nnoremap <silent> <F2> <cmd>Telescope find_files<CR>
+
+" Пошук у поточному файлі
+nnoremap <silent> <F4> <cmd>Telescope current_buffer_fuzzy_find<CR>
+
+" Пошук тексту в проєкті
+nnoremap <silent> <F5> <cmd>Telescope live_grep<CR>
 
 " --- АКТИВАЦІЯ TELESCOPE ---
 lua << EOF
