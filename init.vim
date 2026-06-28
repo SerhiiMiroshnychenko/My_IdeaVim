@@ -33,8 +33,8 @@ require('telescope').setup{
     layout_strategy = 'vertical', -- Результати знизу, прев'ю зверху
     layout_config = {
       vertical = { 
-        width = 0.9,              -- Ширина 90%
-        height = 0.9,            -- Оптимальна висота, щоб блоки не зліплювалися
+        width = 0.9,              
+        height = 0.9,            
 		preview_height = 0.5,
         preview_cutoff = 0,       -- Прев'ю ніколи не зникає
       }
